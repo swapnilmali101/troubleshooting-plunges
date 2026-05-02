@@ -1,7 +1,7 @@
 # troubleshooting-plunges
 
-| Scenarios | Documents |
-| ----- | ----- |
-| Kubernetes | [k8s-errors][k8s] |
+| *Troubleshooting documents for different tools in production environment* |
+| ----- |
+| [Kubernetes Errors][k8s] |
 
-[k8s]: ./k8s-errors.md
+[k8s]: <./k8s-errors.md>
