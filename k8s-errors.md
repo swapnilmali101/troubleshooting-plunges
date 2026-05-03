@@ -1,18 +1,22 @@
 # k8s errors troubleshoots
 
-___How to Debug___
+## How to Debug
 
 If the Pod is still not running, run this command to see the exact error:
 
 `kubectl describe pod -l app=deployment-app-name -n namespace-name`
 
-___Common errors to look for:___
+---
+
+## Common errors to look for:
 
 `CreateContainerConfigError` : This usually means the Secret `name-of-secret` wasn't found in the `namespace-name` namespace.
 
 `CrashLoopBackOff` : This means the container started but died (likely because it couldn't connect to MongoDB).
 
-___Why the "CRD" error?___
+---
+
+## Why the "CRD" error?
 
 Kubernetes gives you that confusing message about "CRDs" (Custom Resource Definitions) because it assumes that if a resource isn't part of the standard library it knows about, it must be a custom one you forgot to install. In this case, it’s just a typo in the address!
 
